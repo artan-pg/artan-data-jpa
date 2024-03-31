@@ -1,0 +1,104 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.artanpg</groupId>
+        <artifactId>artan-data-parent</artifactId>
+        <version>0.0.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.github.artanpg.data.jpa</groupId>
+    <artifactId>artan-data-jpa</artifactId>
+    <version>0.0.0-SNAPSHOT</version>
+
+    <name>artan-data-jpa</name>
+    <description>Artan Data module to provide support for JPA repositories</description>
+    <url>https://github.com/artan-pg/artan-data-jpa</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>restless</id>
+            <name>Mohammad Yazdian</name>
+            <email>m.yazdian70@outlook.com</email>
+            <organization>ArtanPG</organization>
+            <organizationUrl>https://github.com/artan-pg</organizationUrl>
+            <roles>
+                <role>Project lead</role>
+            </roles>
+            <timezone>+3:30</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/artan-pg/artan-data-jpa</url>
+        <connection>scm:git:https://github.com/artan-pg/artan-data-jpa.git</connection>
+        <developerConnection>scm:git:https://github.com/artan-pg/artan-data-jpa.git</developerConnection>
+    </scm>
+
+    <issueManagement>
+        <url>https://github.com/artan-pg/artan-data-jpa/issues</url>
+        <system>GitHub</system>
+    </issueManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.artanpg.data.commons</groupId>
+            <artifactId>artan-data-commons</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>clean compile package install</defaultGoal>
+
+        <resources>
+            <resource>
+                <targetPath>${basedir}/target/classes</targetPath>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>excludes/**</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <targetPath>${basedir}/target/test-classes</targetPath>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>excludes/**</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
