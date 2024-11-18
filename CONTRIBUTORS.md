@@ -1,4 +1,6 @@
 ## CONTRIBUTORS
 
 ---
-* Mohammad Yazdian [m.yazdian70@outlook.com](mailto:m.yazdian70@outlook.com)
+
+Special thanks for all the people who had helped this project so far:
+* [Mohammad Yazdian](mailto:m.yazdian70@outlook.com)
